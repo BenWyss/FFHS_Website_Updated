@@ -1,0 +1,72 @@
+/*General Settings */
+
+body {
+	padding:0;
+	margin: 0;
+	font-family:'Ubuntu';
+}
+
+/*Mobile First Approach*/
+.container {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-area-columns: 100vw;
+	grid-area-rows: 10vh 25vh 25vh 25vh 15vh;
+	grid-template-areas:
+		"nav"
+		"wrapper"
+		"wrapper"
+		"wrapper"
+		"footer";
+}
+
+/*Navigation Bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+/*Smallest Screen (Mobile)*/
+@media screen and (mind-width: 280px) and (max-width: 766px) {
+	
+}
+
+/*Bigger Screens*/
+@media screen and (min-width: 768px) {
+	.container {
+		display: grid;
+		width: 100vw;
+		height: 100vh;
+		
+	}
+}
+
+
+/*Biggest Screens (lock screen size if you are at 1200px)*/
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}
