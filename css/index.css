@@ -1,72 +1,177 @@
-/*General Settings */
-
 body {
-	padding:0;
+	font-family: Calibri, sans-serif;
 	margin: 0;
-	font-family:'Ubuntu';
+	padding: 0;
 }
 
-/*Mobile First Approach*/
 .container {
 	display: grid;
-	width: 100vw;
-	height: 100vh;
-	grid-area-columns: 100vw;
-	grid-area-rows: 10vh 25vh 25vh 25vh 15vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 10vh 75vh 15vh;
 	grid-template-areas:
 		"nav"
-		"wrapper"
-		"wrapper"
 		"wrapper"
 		"footer";
 }
 
 /*Navigation Bar*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+nav {
+	grid-area: nav;
+	background-color: #303537;
+	display: grid;
+	grid-template-columns: 26vw 18vw 18vw 18vw 18vw;
+	grid-template-rows: 100%;
+	grid-template-areas:
+		"home pizza salad softdrinks feedback";
+	list-style-type: none;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: center;
 }
 
-li {
-    float: left;
+#home {
+	grid-area: home;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+#pizza {
+	grid-area: pizza;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+#salad {
+	grid-area: salad;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-/*Smallest Screen (Mobile)*/
-@media screen and (mind-width: 280px) and (max-width: 766px) {
-	
+#softdrinks {
+	grid-area: softdrinks;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-/*Bigger Screens*/
-@media screen and (min-width: 768px) {
-	.container {
-		display: grid;
-		width: 100vw;
-		height: 100vh;
-		
-	}
+#feedback {
+	grid-area: feedback;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-
-/*Biggest Screens (lock screen size if you are at 1200px)*/
-@media screen and (min-width: 1200px) {
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+nav a {
+	color: white;
+	text-decoration: none;
 }
+
+#home:hover { background-color: #374246; }
+#pizza:hover { background-color: #374246; }
+#salad:hover { background-color: #374246; }
+#softdrinks:hover { background-color: #374246; }
+#feedback:hover { background-color: #374246; }
+
+/*Wrapper*/
+#Wrapper {
+	grid-area: wrapper;
+	background-image: url("../images/background.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 30vh auto;
+	grid-template-areas:
+		"Welcome Welcome Welcome"
+		"Pizza Salad Softdrinks";
+		grid-gap: 2em;
+}
+
+#Welcome {
+	grid-area: Welcome;
+	text-align: center;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#Pizza {
+	grid-area: Pizza;
+	text-align: center;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+}
+
+#Salad {
+	grid-area: Salad;
+	text-align: center;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+}
+
+#Softdrinks {
+	grid-area: Softdrinks;
+	text-align: center;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+}
+
+#Wrapper a {
+	color: black;
+	text-decoration: none;
+}
+
+#Pizza:hover { background-color: rgba(83, 87, 81, 0.3); }
+#Salad:hover { background-color: rgba(83, 87, 81, 0.3); }
+#Softdrinks:hover { background-color: rgba(83, 87, 81, 0.3); }
+
+/*Footer*/
+footer {
+	grid-area: footer;
+	background-color: #303537;
+	color: white;
+	display: grid;
+	grid-template-columns: 30vw 40vw 30vw;
+	grid-template-rows: 100%;
+	grid-template-areas:
+		"opening review adress";
+}
+
+#Openinghours {
+	grid-area: opening;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: small;
+}
+
+#Review {
+	grid-area: review;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: small;
+}
+
+#Adress {
+	grid-area: adress;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: small;
+}
+
