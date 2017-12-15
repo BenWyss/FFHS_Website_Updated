@@ -1,0 +1,93 @@
+/*MAIN*/
+.Main {
+	grid-area: main;
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100%;
+	grid-template-areas:
+		"coke fanta pepsi redbull";
+	grid-gap: 1em;
+	padding: 1em;
+	color: #F4E87C;
+}
+
+.Coke {
+	grid-area: coke;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 80% 12% 8%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"size price buy";
+	background-color: #EF7B45;
+}
+
+.Fanta {
+	grid-area: fanta;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 80% 12% 8%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"size price buy";
+	background-color: #EF7B45;
+}
+
+.Pepsi {
+	grid-area: pepsi;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 80% 12% 8%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"size price buy";
+	background-color: #EF7B45;
+}
+
+.Redbull {
+	grid-area: redbull;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 80% 12% 8%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"size price buy";
+	background-color: #EF7B45;
+}
+
+.Image {
+	grid-area: image;
+}
+
+.Title {
+	grid-area: title;
+	background-color: #EF7B45;
+  	text-align: center;
+  	align-self: center;
+  	font-size: x-large;
+}
+
+.Size {
+	grid-area: size;
+	background-color: #EF7B45;
+	font-size: small;
+	align-self: center;
+  	text-align: center;
+}
+
+.Price {
+	grid-area: price;
+	background-color: #EF7B45;
+	align-self: center;
+}
+
+.Buy {
+	grid-area: buy;
+	background-color: #EF7B45;
+	text-align: center;
+	align-self: center;
+}
