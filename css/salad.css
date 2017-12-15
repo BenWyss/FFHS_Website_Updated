@@ -1,0 +1,105 @@
+/*MAIN*/
+.Main {
+	grid-area: main;
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100%;
+	grid-template-areas:
+		"salad tomatosalad field rocket";
+	grid-gap: 1em;
+	padding: 1em;
+	color: #F4E87C;
+}
+
+.Green {
+	grid-area: salad;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 70% 12% 8% 10%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"description description description"
+		"dressing price buy";
+	background-color: #EF7B45;
+}
+
+.Tomato {
+	grid-area: tomatosalad;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 70% 12% 8% 10%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"description description description"
+		"dressing price buy";
+	background-color: #EF7B45;
+}
+
+.Field {
+	grid-area: field;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 70% 12% 8% 10%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"description description description"
+		"dressing price buy";
+	background-color: #EF7B45;
+}
+
+.Rocket {
+	grid-area: rocket;
+	display: inline-grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-rows: 70% 12% 8% 10%;
+	grid-template-areas:
+		"image image image"
+		"title title title"
+		"description description description"
+		"dressing price buy";
+	background-color: #EF7B45;
+}
+
+.Image {
+	grid-area: image;
+}
+
+.Title {
+	grid-area: title;
+	background-color: #EF7B45;
+  	text-align: center;
+  	align-self: center;
+}
+
+.Description {
+	grid-area: description;
+	background-color: #EF7B45;
+	font-size: small;
+	align-self: center;
+  	text-align: center;
+}
+
+.Dressing {
+	grid-area: dressing;
+	background-color: #EF7B45;
+	font-size: small;
+	align-self: center;
+  	text-align: center;
+}
+
+.Price {
+	grid-area: price;
+	background-color: #EF7B45;
+	align-self: center;
+}
+
+.Buy {
+	grid-area: buy;
+	background-color: #EF7B45;
+	text-align: center;
+	align-self: center;
+}
+
